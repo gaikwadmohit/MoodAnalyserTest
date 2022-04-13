@@ -12,11 +12,17 @@ public class MoodAnalyser {
     public MoodAnalyser(String message) {
         this.message = message;
     }
-
+    
+    
+  //Handle NULLPOINTER Exception using try-catch block
     public String analyseMood() {
-        if (message.contains("SAD"))
-            return "SAD";
-        else
+        try {
+            if (message.contains("SAD"))
+                return "SAD";
+            else
+                return "HAPPY";
+        } catch(Exception e) {
             return "HAPPY";
+        }
     }
 }
