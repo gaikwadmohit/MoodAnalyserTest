@@ -2,12 +2,21 @@ package moodTest;
 
 public class MoodAnalyser {
 
-	public String analyseMood(String message) {
+	private String message;
 
-		if (message.contains("sad"))
-			return "SAD";
-		else
-			return "HAPPY";
+    //Default Constructor
+    public MoodAnalyser() {
+    }
 
-	}
+    //Parameterized Constructor
+    public MoodAnalyser(String message) {
+        this.message = message;
+    }
+
+    public String analyseMood() {
+        if (message.contains("SAD"))
+            return "SAD";
+        else
+            return "HAPPY";
+    }
 }
